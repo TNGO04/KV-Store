@@ -1,36 +1,53 @@
-package server;// Code guided by tutorial: https://www.baeldung.com/a-guide-to-java-sockets
+package server;
 import java.net.*;
 import java.io.*;
 
-import static java.lang.Character.isUpperCase;
-import static java.lang.Character.toLowerCase;
-import static java.lang.Character.toUpperCase;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class Server {
-  static IServer server;
+  private static IServer server;
+  private static Logger logger =  Logger.getLogger("Server Log");
+  private static FileHandler f;
 
+  public Server() {
+  }
 
-  public static void main(String args[]) throws IOException {
-    if (args.length < 3) {
-      System.out.println("Usage: java <Port> <IPAddress> <Server type>");
-    }
-
-    int port = Integer.parseInt(args[0]);
-    String host = args[1];
-    String serverType = args[2];
-
-    if (serverType.toLowerCase() == "tcp") {
-      server = new TCPServer(port, host);
-    }
-    else if (serverType.toLowerCase() == "udp") {
-      server = new UDPServer(port, host);
-    }
-    else {
-      System.out.println("Invalid server type");
+  private static void initializeFileHandler() throws IOException {
+    f = new FileHandler("server.log");
+    logger.addHandler(f);
+    LogFormatter formatter = new LogFormatter();
+    f.setFormatter(formatter);
+  }
+  public static void main(String args[]) throws Exception {
+    if (args.length < 2) {
+      System.out.println("Usage: java <Port> <Server type>");
       return;
     }
+    // parse arguments
+    int port = Integer.parseInt(args[0]);
+    String serverType = args[1];
+
+    initializeFileHandler();
+
+    if (serverType.toLowerCase().equals("tcp")) {
+      server = new TCPServer(port, logger);
+    } else if (serverType.toLowerCase().equals("udp")) {
+    //server = new UDPServer(port);
+    } else {
+      System.out.println("Invalid server type given: select TCP or UDP");
+      return;
+    }
+
+    Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+      // Close the FileHandler when the program is shutting down
+      f.close();
+    }));
 
     server.start();
 
 
+  }
 }

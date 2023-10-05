@@ -4,34 +4,29 @@ import java.net.*;
 import java.io.*;
 import java.util.Scanner;
 
+
 public class Client {
+  static IClient client;
   public static void main(String args[]) throws IOException {
-    if (args.length < 2) {
+    if (args.length < 3) {
       System.out.println("Usage: java Client <IPAddress> <Port> <Type>");
     }
 
-    String host = args[0];
-    int port = Integer.parseInt(args[1]);
-    
-    try {
-      Scanner scanner = new Scanner(System.in);
-      Socket socket = new Socket(host, port);
+    int port = Integer.parseInt(args[0]);
+    String host = args[1];
+    String clientType = args[2];
 
-      System.out.print("Enter Text: ");
-      String str = scanner.nextLine();
-
-      BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-      PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-
-      out.println(str);
-      System.out.println("Response from the server: " + in.readLine());
-
-      in.close();
-      out.close();
-      socket.close();
+    if (clientType.toLowerCase().equals("tcp")) {
+      client = new TCPClient(port, host);
     }
-    catch (Exception e) {
-      System.out.println("No port found at IP and port given");
+    else if (clientType.toLowerCase().equals("udp")) {
+      client = new UDPClient(port, host);
     }
+    else {
+      System.out.println("Invalid client type");
+      return;
+    }
+
+    client.start();
   }
 }
