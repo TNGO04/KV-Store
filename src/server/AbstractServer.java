@@ -43,7 +43,7 @@ public abstract class AbstractServer implements IServer {
       }
     }
     // if command is null or not predefined
-    this.logger.log(Level.INFO, "Invalid command");
-    return "Invalid command";
+    this.logger.log(Level.INFO, "Invalid command received");
+    return "Invalid command received";
   }
 }

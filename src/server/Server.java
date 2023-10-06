@@ -35,7 +35,7 @@ public class Server {
     if (serverType.toLowerCase().equals("tcp")) {
       server = new TCPServer(port, logger);
     } else if (serverType.toLowerCase().equals("udp")) {
-    //server = new UDPServer(port);
+      server = new UDPServer(port, logger);
     } else {
       System.out.println("Invalid server type given: select TCP or UDP");
       return;
