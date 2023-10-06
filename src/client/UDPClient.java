@@ -1,12 +1,11 @@
 package client;
 
-import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
-import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class UDPClient implements IClient{
-  public UDPClient (int port, String host) throws SocketException {
+  public UDPClient (int port, String host, Logger logger) throws SocketException {
     System.out.println("Client initiated on port " + port + " at host " + host);
     DatagramSocket socket = new DatagramSocket(port);
   }

@@ -31,7 +31,6 @@ public class TCPServer extends AbstractServer implements IServer{
     BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
     while (true) {
-      // start accepting client and communication
 
       // read and parse input from client
       String inputLine = in.readLine();
