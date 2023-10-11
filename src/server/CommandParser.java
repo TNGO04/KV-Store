@@ -1,8 +1,16 @@
 package server;
 
+/*
+  CommandParser class, to parse from a String a Command Object
+ */
 public class CommandParser {
   private static final String delimiter = ",";
 
+  /*
+    * parseCommand method, to parse from a String a Command Object
+    * @param line, the String to parse
+    * @return Command, the Command Object parsed
+   */
   public static Command parseCommand (String line) {
     String[] tokens = line.split(delimiter);
 
@@ -10,7 +18,6 @@ public class CommandParser {
     if (tokens.length < 2) {
       return null;
     }
-
 
     String command = tokens[0].toLowerCase();
 
@@ -30,6 +37,7 @@ public class CommandParser {
       String key = tokens[1];
       return new Command(command, key);
     }
+    // command not recognized
     else {
       return null;
     }

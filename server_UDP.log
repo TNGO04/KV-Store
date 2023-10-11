@@ -1,0 +1,45 @@
+1696645505621: INFO Server started at port 6666
+1696645570642: INFO Received a command from client at host /127.0.0.1 port 63045: get,strawberry
+1696645570651: INFO Response: Key not found within store
+1696645591945: INFO Received a command from client at host /127.0.0.1 port 63045: get,Strawberry
+1696645591954: INFO Response: Red
+1696645598010: INFO Received a command from client at host /127.0.0.1 port 63045: get,Orange
+1696645598013: INFO Response: Orange
+1696645601997: INFO Received a command from client at host /127.0.0.1 port 63045: delete,Orange
+1696645602003: INFO Response: Key Orange deleted
+1696645606291: INFO Received a command from client at host /127.0.0.1 port 63045: get,Orange
+1696645606295: INFO Response: Key not found within store
+1696645613609: INFO Received a command from client at host /127.0.0.1 port 63045: put,Orange,Orange
+1696645613612: INFO Response: Key added to store
+1696645617562: INFO Received a command from client at host /127.0.0.1 port 63045: get,Orange
+1696645617564: INFO Response: Orange
+1696645629067: INFO Received a command from client at host /127.0.0.1 port 63045: delete,Blueberry
+1696645629069: INFO Response: Key Blueberry deleted
+1696645634228: INFO Received a command from client at host /127.0.0.1 port 63045: delete,Blueberry
+1696645634230: INFO Response: Key not found
+1696645651164: INFO Received a command from client at host /127.0.0.1 port 63045: put,Blueberry,Blue
+1696645651167: INFO Response: Key added to store
+1696645670202: INFO Received a command from client at host /127.0.0.1 port 63045: put,Watermelon,Green
+1696645670205: INFO Response: Key added to store
+1696645677447: INFO Received a command from client at host /127.0.0.1 port 63045: put,Mango,Yellow
+1696645677448: INFO Response: Key added to store
+1696645686536: INFO Received a command from client at host /127.0.0.1 port 63045: delete,Apricot
+1696645686540: INFO Response: Key not found
+1696645692024: INFO Received a command from client at host /127.0.0.1 port 63045: get,Apricot
+1696645692025: INFO Response: Key not found within store
+1696645700663: INFO Received a command from client at host /127.0.0.1 port 63045: get,Watermelon
+1696645700666: INFO Response: Green
+1696645718590: INFO Received a command from client at host /127.0.0.1 port 63045: get,Mango
+1696645718592: INFO Response: Yellow
+1696645732194: INFO Received a command from client at host /127.0.0.1 port 63045: DELETE,Banana
+1696645732195: INFO Response: Key Banana deleted
+1696645740052: INFO Received a command from client at host /127.0.0.1 port 63045: get,Banana
+1696645740056: INFO Response: Key not found within store
+1696645746253: INFO Received a command from client at host /127.0.0.1 port 63045: move,BANANA
+1696645746255: INFO Invalid command received of length 11
+1696645764643: INFO Received a command from client at host /127.0.0.1 port 63045: put,Peach,Yellow
+1696645764645: INFO Response: Key added to store
+1696645769836: INFO Received a command from client at host /127.0.0.1 port 63045: get,Peach
+1696645769838: INFO Response: Yellow
+1696645774774: INFO Received a command from client at host /127.0.0.1 port 63045: get,Peach,Yellow
+1696645774775: INFO Invalid command received of length 16

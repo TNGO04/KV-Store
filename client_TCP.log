@@ -1,0 +1,47 @@
+1696645904515: INFO Client connected to socket at port 6666 at host localhost
+1696645915990: INFO Request sent to host localhost at port 6666: get,Banana
+1696645915993: INFO Response received: Yellow
+1696645919988: INFO Request sent to host localhost at port 6666: get,Yellow
+1696645919996: INFO Response received: Key not found
+1696645929484: INFO Request sent to host localhost at port 6666: put,Watermelon,GREEN
+1696645929488: INFO Response received: Key added to store
+1696645937186: INFO Request sent to host localhost at port 6666: get,Watermelon
+1696645937189: INFO Response received: GREEN
+1696645940927: INFO Request sent to host localhost at port 6666: delete,Watermelon
+1696645940934: INFO Response received: Key deleted
+1696645984849: INFO Request sent to host localhost at port 6666: remove,Watermelon
+1696645984852: INFO Response received: Invalid command received
+1696645996716: INFO Request sent to host localhost at port 6666: get,Banana
+1696645996722: INFO Response received: Yellow
+1696646004841: INFO Request sent to host localhost at port 6666: put,Banana,Mustard
+1696646004846: INFO Response received: Key added to store
+1696646007795: INFO Request sent to host localhost at port 6666: get,Banana
+1696646007797: INFO Response received: Mustard
+1696646035738: INFO Request sent to host localhost at port 6666: put,Green Grape,Green
+1696646035741: INFO Response received: Key added to store
+1696646046503: INFO Request sent to host localhost at port 6666: get,Green Grape
+1696646046507: INFO Response received: Green
+1696646063259: INFO Request sent to host localhost at port 6666: put,Black Grape, Black
+1696646063263: INFO Response received: Key added to store
+1696646071222: INFO Request sent to host localhost at port 6666: get,Black Grape
+1696646071226: INFO Response received:  Black
+1696646082369: INFO Request sent to host localhost at port 6666: remove,Black Grape
+1696646082371: INFO Response received: Invalid command received
+1696646090887: INFO Request sent to host localhost at port 6666: delete,Black Grape
+1696646090891: INFO Response received: Key deleted
+1696646119985: INFO Request sent to host localhost at port 6666: delete,Watermelon
+1696646119988: INFO Response received: Key not found
+1696646124779: INFO Request sent to host localhost at port 6666: delete,Banana
+1696646124782: INFO Response received: Key deleted
+1696646127788: INFO Request sent to host localhost at port 6666: delete,banana
+1696646127792: INFO Response received: Key not found
+1696646138618: INFO Request sent to host localhost at port 6666: delete,Strawberry
+1696646138621: INFO Response received: Key deleted
+1696646145337: INFO Request sent to host localhost at port 6666: get,Strawberry
+1696646145339: INFO Response received: Key not found
+1696646150974: INFO Request sent to host localhost at port 6666: put,Strawberry,Pink
+1696646150979: INFO Response received: Key added to store
+1696646160263: INFO Request sent to host localhost at port 6666: get,Strawberry
+1696646160266: INFO Response received: Pink
+1696646164562: INFO Request sent to host localhost at port 6666: delete,Strawberry
+1696646164565: INFO Response received: Key deleted

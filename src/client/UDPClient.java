@@ -1,9 +1,6 @@
 package client;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -14,6 +11,9 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*
+  UDPClient class that implements IClient interface and is used to create a UDP client
+ */
 public class UDPClient implements IClient{
   private Logger logger;
   private DatagramSocket socket;
@@ -22,27 +22,37 @@ public class UDPClient implements IClient{
 
   private final int bufferSize = 1024;
 
+  /*
+    Constructor for UDPClient
+   */
   public UDPClient (int port, String host, Logger logger) throws SocketException, UnknownHostException {
     this.address = InetAddress.getByName(host);
+    this.port = port;
+
+    // Create a datagram socket, bound to any available port on the local machine
     this.socket = new DatagramSocket();
     this.socket.setSoTimeout(Client.TIMEOUT);
-    this.port = port;
 
     this.logger = logger;
     this.logger.log(Level.INFO, "DatagramSocket created");
   }
 
+  /*
+  takes in user input and sends to server, receiving response
+ */
   @Override
   public void start() throws IOException {
     byte[] receivingBuffer = new byte[bufferSize];
 
+    // Keep sending requests to the server
     while (true) {
+      // Get the command from the user
       Scanner scanner = new Scanner(System.in);
       System.out.print("Enter Command: ");
       String str = scanner.nextLine();
 
       byte[] message = str.getBytes();
-
+      // Create a datagram packet for outgoing message
       DatagramPacket packet = new DatagramPacket(message, message.length, address, port);
       socket.send(packet);
       this.logger.log(Level.INFO, "Request sent to " + address
@@ -50,6 +60,7 @@ public class UDPClient implements IClient{
 
 
       packet = new DatagramPacket(receivingBuffer, bufferSize);
+      // Receive the response from the server
       try {
         socket.receive(packet);
 
@@ -57,15 +68,12 @@ public class UDPClient implements IClient{
         System.out.println(response);
         this.logger.log(Level.INFO, "Response Received: " + response);
 
-      } catch (SocketTimeoutException e) {
+      }
+      // Handle timeout
+      catch (SocketTimeoutException e) {
         // Handle the timeout condition here
         System.out.println("Request timed out");
         this.logger.log(Level.INFO, "Request timed out");
-      }
-      catch (SocketException e) {
-        System.out.println("Connection reset. Closing client.");
-        this.logger.log(Level.INFO, "Connection Reset");
-        break;
       }
     }
 

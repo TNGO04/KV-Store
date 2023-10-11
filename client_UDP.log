@@ -1,0 +1,45 @@
+1696645520363: INFO DatagramSocket created
+1696645570666: INFO Request sent to localhost/127.0.0.1 at port 6666: get,strawberry
+1696645570670: INFO Response Received: Key not found
+1696645591947: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Strawberry
+1696645591956: INFO Response Received: Red
+1696645598010: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Orange
+1696645598015: INFO Response Received: Orange
+1696645601997: INFO Request sent to localhost/127.0.0.1 at port 6666: delete,Orange
+1696645602007: INFO Response Received: Key deleted
+1696645606291: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Orange
+1696645606297: INFO Response Received: Key not found
+1696645613609: INFO Request sent to localhost/127.0.0.1 at port 6666: put,Orange,Orange
+1696645613613: INFO Response Received: Key added to store
+1696645617562: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Orange
+1696645617565: INFO Response Received: Orange
+1696645629067: INFO Request sent to localhost/127.0.0.1 at port 6666: delete,Blueberry
+1696645629070: INFO Response Received: Key deleted
+1696645634228: INFO Request sent to localhost/127.0.0.1 at port 6666: delete,Blueberry
+1696645634231: INFO Response Received: Key not found
+1696645651164: INFO Request sent to localhost/127.0.0.1 at port 6666: put,Blueberry,Blue
+1696645651169: INFO Response Received: Key added to store
+1696645670202: INFO Request sent to localhost/127.0.0.1 at port 6666: put,Watermelon,Green
+1696645670207: INFO Response Received: Key added to store
+1696645677447: INFO Request sent to localhost/127.0.0.1 at port 6666: put,Mango,Yellow
+1696645677450: INFO Response Received: Key added to store
+1696645686537: INFO Request sent to localhost/127.0.0.1 at port 6666: delete,Apricot
+1696645686541: INFO Response Received: Key not found
+1696645692024: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Apricot
+1696645692026: INFO Response Received: Key not found
+1696645700664: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Watermelon
+1696645700668: INFO Response Received: Green
+1696645718590: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Mango
+1696645718593: INFO Response Received: Yellow
+1696645732194: INFO Request sent to localhost/127.0.0.1 at port 6666: DELETE,Banana
+1696645732203: INFO Response Received: Key deleted
+1696645740052: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Banana
+1696645740058: INFO Response Received: Key not found
+1696645746253: INFO Request sent to localhost/127.0.0.1 at port 6666: move,BANANA
+1696645746256: INFO Response Received: Invalid command received
+1696645764643: INFO Request sent to localhost/127.0.0.1 at port 6666: put,Peach,Yellow
+1696645764647: INFO Response Received: Key added to store
+1696645769836: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Peach
+1696645769839: INFO Response Received: Yellow
+1696645774774: INFO Request sent to localhost/127.0.0.1 at port 6666: get,Peach,Yellow
+1696645774776: INFO Response Received: Invalid command received

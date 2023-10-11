@@ -3,6 +3,9 @@ package server;
 import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
+/*
+  * This class is used to format the log messages, including timestamp in millis.
+ */
 public class LogFormatter extends Formatter {
   /**
    * Format the given log record and return the formatted string.
@@ -17,6 +20,7 @@ public class LogFormatter extends Formatter {
    */
   @Override
   public String format(LogRecord record) {
+    // record timestamp, level of logging, and message
     String formatted = System.currentTimeMillis() + ": "
             + record.getLevel().getName() + " "
             + formatMessage(record) + "\n";

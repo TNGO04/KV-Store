@@ -8,13 +8,19 @@ import java.util.logging.Logger;
 
 import server.LogFormatter;
 
-
+/*
+  Client class that is responsible for creating the client based on the type
+  of client (TCP or UDP)
+ */
 public class Client {
   public static final int TIMEOUT = 5000;
   private static IClient client;
   private static Logger logger =  Logger.getLogger("Client Log");
   private static FileHandler f;
 
+/*
+  Initialize the file handler for the logger
+ */
   private static void initializeFileHandler() throws IOException {
     f = new FileHandler("client.log");
     logger.addHandler(f);
@@ -27,12 +33,14 @@ public class Client {
       System.out.println("Usage: java Client <IPAddress> <Port> <Type>");
     }
 
+    // Parse the arguments
     int port = Integer.parseInt(args[0]);
     String host = args[1];
     String clientType = args[2];
 
     initializeFileHandler();
 
+    // Create the client based on UDP or TCP
     if (clientType.toLowerCase().equals("tcp")) {
       client = new TCPClient(port, host, logger);
     }

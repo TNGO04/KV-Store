@@ -1,0 +1,47 @@
+1696645899316: INFO Server started at port 6666
+1696645915983: INFO Received a command from client at host 127.0.0.1 port 52429: get,Banana
+1696645915989: INFO Response: Yellow
+1696645919988: INFO Received a command from client at host 127.0.0.1 port 52429: get,Yellow
+1696645919992: INFO Response: Key not found within store
+1696645929484: INFO Received a command from client at host 127.0.0.1 port 52429: put,Watermelon,GREEN
+1696645929486: INFO Response: Key added to store
+1696645937186: INFO Received a command from client at host 127.0.0.1 port 52429: get,Watermelon
+1696645937188: INFO Response: GREEN
+1696645940927: INFO Received a command from client at host 127.0.0.1 port 52429: delete,Watermelon
+1696645940931: INFO Response: Key Watermelon deleted
+1696645984849: INFO Received a command from client at host 127.0.0.1 port 52429: remove,Watermelon
+1696645984850: INFO Invalid command received of length 17
+1696645996716: INFO Received a command from client at host 127.0.0.1 port 52429: get,Banana
+1696645996719: INFO Response: Yellow
+1696646004841: INFO Received a command from client at host 127.0.0.1 port 52429: put,Banana,Mustard
+1696646004843: INFO Response: Key added to store
+1696646007795: INFO Received a command from client at host 127.0.0.1 port 52429: get,Banana
+1696646007796: INFO Response: Mustard
+1696646035738: INFO Received a command from client at host 127.0.0.1 port 52429: put,Green Grape,Green
+1696646035739: INFO Response: Key added to store
+1696646046503: INFO Received a command from client at host 127.0.0.1 port 52429: get,Green Grape
+1696646046505: INFO Response: Green
+1696646063259: INFO Received a command from client at host 127.0.0.1 port 52429: put,Black Grape, Black
+1696646063262: INFO Response: Key added to store
+1696646071222: INFO Received a command from client at host 127.0.0.1 port 52429: get,Black Grape
+1696646071225: INFO Response:  Black
+1696646082369: INFO Received a command from client at host 127.0.0.1 port 52429: remove,Black Grape
+1696646082370: INFO Invalid command received of length 18
+1696646090887: INFO Received a command from client at host 127.0.0.1 port 52429: delete,Black Grape
+1696646090890: INFO Response: Key Black Grape deleted
+1696646119985: INFO Received a command from client at host 127.0.0.1 port 52429: delete,Watermelon
+1696646119987: INFO Response: Key not found
+1696646124779: INFO Received a command from client at host 127.0.0.1 port 52429: delete,Banana
+1696646124780: INFO Response: Key Banana deleted
+1696646127788: INFO Received a command from client at host 127.0.0.1 port 52429: delete,banana
+1696646127790: INFO Response: Key not found
+1696646138619: INFO Received a command from client at host 127.0.0.1 port 52429: delete,Strawberry
+1696646138620: INFO Response: Key Strawberry deleted
+1696646145337: INFO Received a command from client at host 127.0.0.1 port 52429: get,Strawberry
+1696646145338: INFO Response: Key not found within store
+1696646150974: INFO Received a command from client at host 127.0.0.1 port 52429: put,Strawberry,Pink
+1696646150977: INFO Response: Key added to store
+1696646160263: INFO Received a command from client at host 127.0.0.1 port 52429: get,Strawberry
+1696646160265: INFO Response: Pink
+1696646164562: INFO Received a command from client at host 127.0.0.1 port 52429: delete,Strawberry
+1696646164563: INFO Response: Key Strawberry deleted
